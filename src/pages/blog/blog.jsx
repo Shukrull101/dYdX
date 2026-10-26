@@ -5,7 +5,7 @@ import { PostCard } from "../homepage/homepage";
 
 export default function Blog() {
   const [t, setT] = useState("All");
-  const [n, setN] = useState(4);
+  const [n, setN] = useState(6);
   const list = posts.filter((p) => t === "All" || p.cat === t);
   return (
     <div className="wrap wide">
@@ -26,7 +26,7 @@ export default function Blog() {
       {n < list.length && (
         <div className="c">
           <button className="btn ghost" onClick={() => setN(n + 2)}>
-            Load more
+            Load more posts
           </button>
         </div>
       )}
